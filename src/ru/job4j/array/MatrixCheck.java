@@ -1,8 +1,8 @@
 package ru.job4j.array;
 
 public class MatrixCheck {
-    /*
-    Метод проверяет что все элементы в строке заполнены символом 'X'
+    /**
+     * Проверяет что все элементы в строке заполнены символом 'X'
      */
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
@@ -15,8 +15,8 @@ public class MatrixCheck {
         return result;
     }
 
-    /*
-    Метод проверяет что все элементы в колонке заполнены символом 'X'
+    /**
+     * Проверяет что все элементы в колонке заполнены символом 'X'
      */
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
@@ -27,5 +27,16 @@ public class MatrixCheck {
             }
         }
         return result;
+    }
+
+    /**
+     * Заполняет одномерный массив элементами диагонали из двухмерного массива
+     */
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
     }
 }
