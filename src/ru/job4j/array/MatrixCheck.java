@@ -39,4 +39,19 @@ public class MatrixCheck {
         }
         return rsl;
     }
+
+    /**
+     * Проверять, находится ли на поле выигрышная ситуация
+     * Массив всегда квадратный и всегда на 5 элементов.
+     */
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (monoHorizontal(board, i) || monoVertical(board, i)) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
 }
