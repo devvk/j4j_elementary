@@ -5,8 +5,23 @@ import java.util.Objects;
 public class Cinema {
 
     public static Place checkEmptyPlace(Place[][] places) {
-
-        return null;
+        Place place = null;
+        for (int i = 0; i < places.length; i++) {
+            for (int j = 0; j < places[i].length; j++) {
+                if (places[i][j] == null) {
+                    if (j + 1 < places[i].length && places[i][j + 1] == null) {
+                        place = new Place(i, j);
+                        return place;
+                    } else {
+                        if (i + 1 < places[i].length && places[i + 1][j] == null) {
+                            place = new Place(i + 1, j);
+                            return place;
+                        }
+                    }
+                }
+            }
+        }
+        return place;
     }
 
     public static class Place {
