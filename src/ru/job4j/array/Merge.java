@@ -12,7 +12,7 @@ public class Merge {
             if (counterLeft == left.length) {
                 result[i] = right[counterRight++];
             } else if (counterRight == right.length) {
-                result[i] = right[counterLeft++];
+                result[i] = left[counterLeft++];
             } else if (left[counterLeft] < right[counterRight]) {
                 result[i] = left[counterLeft++];
             } else {
