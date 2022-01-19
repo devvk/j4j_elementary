@@ -2,12 +2,12 @@ package ru.job4j.loop;
 
 public class OddCount {
     public static int count(int a, int b) {
-        int count = 0;
+        int oddCount = 0;
         for (int i = a; i <= b; i++) {
-            if ((i % 2) == 1 || i == 1) {
-                count++;
+            if (i % 2 == 1) {
+                oddCount++;
             }
         }
-        return count;
+        return oddCount;
     }
 }
