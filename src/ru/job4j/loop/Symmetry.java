@@ -1,15 +1,15 @@
 package ru.job4j.loop;
 
 public class Symmetry {
-    public static boolean check(int i) {
-        boolean symmetry = true;
-        String str = String.valueOf(i);
-        for (int j = 0; j < (str.length() / 2); j++) {
-            if (str.charAt(j) != str.charAt(str.length() - j - 1)) {
-                symmetry = false;
+    public static boolean check(int num) {
+        boolean isSymmetry = true;
+        String str = Integer.toString(num);
+        for (int i = 0; i < (str.length() / 2); i++) {
+            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+                isSymmetry = false;
                 break;
             }
         }
-        return symmetry;
+        return isSymmetry;
     }
 }
