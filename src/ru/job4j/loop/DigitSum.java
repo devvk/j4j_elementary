@@ -15,8 +15,6 @@ public class DigitSum {
         while (num > 0) {
             sum += num % 10;
             num = num / 10;
-            System.out.println("sum: " + sum);
-            System.out.println("num: " + num);
         }
         return sum;
     }
