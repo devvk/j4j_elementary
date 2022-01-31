@@ -5,11 +5,11 @@ public class Cryptography {
         if (s.length() == 0) {
             s = "empty";
         } else if (s.length() > 4) {
+            StringBuilder sb = new StringBuilder(s);
             for (int i = 0; i < s.length() - 4; i++) {
-                StringBuilder sb = new StringBuilder(s);
                 sb.setCharAt(i, '#');
-                s = sb.toString();
             }
+            s = sb.toString();
         }
         return s;
     }
