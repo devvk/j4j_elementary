@@ -5,20 +5,20 @@ package ru.job4j.array;
  */
 public class Merge {
     public static int[] merge(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
-        int counterLeft = 0;
-        int counterRight = 0;
-        for (int i = 0; i < result.length; i++) {
-            if (counterLeft == left.length) {
-                result[i] = right[counterRight++];
-            } else if (counterRight == right.length) {
-                result[i] = left[counterLeft++];
-            } else if (left[counterLeft] < right[counterRight]) {
-                result[i] = left[counterLeft++];
+        int[] rsl = new int[left.length + right.length];
+        int countLeft = 0;
+        int countRight = 0;
+        for (int i = 0; i < rsl.length; i++) {
+            if (countLeft == left.length) {
+                rsl[i] = right[countRight++];
+            } else if (countRight == right.length) {
+                rsl[i] = left[countLeft++];
+            } else if (left[countLeft] < right[countRight]) {
+                rsl[i] = left[countLeft++];
             } else {
-                result[i] = right[counterRight++];
+                rsl[i] = right[countRight++];
             }
         }
-        return result;
+        return rsl;
     }
 }
