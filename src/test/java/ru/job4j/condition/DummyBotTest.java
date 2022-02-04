@@ -1,31 +1,30 @@
 package ru.job4j.condition;
 
+import org.junit.Assert;
 import org.junit.Test;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DummyBotTest {
     @Test
     public void whenGreetBot() {
-        assertThat(
-                DummyBot.answer("Привет, Бот."),
-                is("Привет, умник.")
-        );
+        String in = "Привет, Бот.";
+        String result = DummyBot.answer(in);
+        String expected = "Привет, умник.";
+        Assert.assertEquals(expected, result);
     }
 
     @Test
     public void whenByeBot() {
-        assertThat(
-                DummyBot.answer("Пока."),
-                is("До скорой встречи.")
-        );
+        String in = "Пока.";
+        String result = DummyBot.answer(in);
+        String expected = "До скорой встречи.";
+        Assert.assertEquals(expected, result);
     }
 
     @Test
     public void whenUnknownBot() {
-        assertThat(
-                DummyBot.answer("Сколько будет 2 + 2?"),
-                is("Это ставит меня в тупик. Задайте другой вопрос.")
-        );
+        String in = "Сколько будет 2 + 2?";
+        String result = DummyBot.answer(in);
+        String expected = "Это ставит меня в тупик. Задайте другой вопрос.";
+        Assert.assertEquals(expected, result);
     }
 }
