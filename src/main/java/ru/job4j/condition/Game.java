@@ -2,13 +2,13 @@ package ru.job4j.condition;
 
 public class Game {
     public static void menu(String name) {
-        if (name.equals("super mario")) {
+        if ("super mario".equals(name)) {
             System.out.println("Start - super mario");
         }
-        if (name.equals("tanks")) {
+        if ("tanks".equals(name)) {
             System.out.println("Start - tanks");
         }
-        if (name.equals("tetris")) {
+        if ("tetris".equals(name)) {
             System.out.println("Start - tetris");
         }
     }
