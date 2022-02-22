@@ -2,10 +2,10 @@ package ru.job4j.loop;
 
 public class ModWithLoop {
     public static void main(String[] args) {
-        System.out.println(mod(4, 2));  // 0
-        System.out.println(mod(3, 2));  // 1
-        System.out.println(mod(8, 3));  // 2
-        System.out.println(mod(0, 3));   // 0
+        System.out.println(mod(4, 2));
+        System.out.println(mod(3, 2));
+        System.out.println(mod(8, 3));
+        System.out.println(mod(0, 3));
     }
 
     public static int mod(int n, int d) {
