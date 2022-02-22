@@ -10,6 +10,12 @@ public class DigitSum {
         System.out.println(sum(45));        // 9
     }
 
+    /**
+     * Метод рассчитывает сумму цифр числа.
+     *
+     * @param num Число, для которого необходимо рассчитывать сумму цифр.
+     * @return Сумма цифр числа.
+     */
     public static int sum(int num) {
         int sum = 0;
         while (num > 0) {
