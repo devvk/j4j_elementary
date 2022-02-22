@@ -1,12 +1,12 @@
 package ru.job4j.loop;
 
 public class Mortgage {
-
     /**
-     * Метод должен вычислять количество лет, необходимых для погашения кредита.
-     *     amount - сумма выданная по кредиту,
-     *     salary - годовой доход,
-     *     percent - процентная ставка по кредиту.
+     * Метод вычисляет количество лет, необходимых для погашения кредита.
+     * @param amount Сумма выданная по кредиту.
+     * @param salary Годовой доход.
+     * @param percent Процентная ставка по кредиту.
+     * @return Количество лет для погашения кредита.
      */
     public static int year(int amount, int salary, double percent) {
         int year = 0;
