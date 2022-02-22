@@ -1,7 +1,5 @@
 package ru.job4j.array;
 
-import java.util.Arrays;
-
 public class TriangleMatrix {
     public static int[][] rows(int count) {
         int[][] triangle = new int[count][];
@@ -13,7 +11,6 @@ public class TriangleMatrix {
                 counter++;
             }
         }
-        //System.out.println(Arrays.deepToString(triangle));
         return triangle;
     }
 }
