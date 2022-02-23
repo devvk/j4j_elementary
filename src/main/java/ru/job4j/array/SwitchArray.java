@@ -2,6 +2,14 @@ package ru.job4j.array;
 
 public class SwitchArray {
 
+    /**
+     * Метод меняет местами заданные элементы в массиве.
+     *
+     * @param array  Массив элементов типа int.
+     * @param source Исходный элемент массива.
+     * @param dest   Целевой элемент массива.
+     * @return Изменённый массив элементов типа int.
+     */
     public static int[] swap(int[] array, int source, int dest) {
         int temp = array[dest];
         array[dest] = array[source];
@@ -9,6 +17,12 @@ public class SwitchArray {
         return array;
     }
 
+    /**
+     * Метод меняет местами нулевой элемент и последний элемент в массиве.
+     *
+     * @param array Массив элементов типа int.
+     * @return Изменённый массив элементов типа int.
+     */
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
         array[0] = array[array.length - 1];
@@ -20,7 +34,7 @@ public class SwitchArray {
         int[] nums = new int[]{1, 2, 3, 4, 5, 6};
         int[] rsl = swapBorder(nums);
         for (int index : rsl) {
-            System.out.println(rsl[index]);
+            System.out.println(index);
         }
     }
 }
