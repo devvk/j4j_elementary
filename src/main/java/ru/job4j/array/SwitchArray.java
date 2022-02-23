@@ -6,8 +6,8 @@ public class SwitchArray {
      * Метод меняет местами заданные элементы в массиве.
      *
      * @param array  Массив элементов типа int.
-     * @param source Исходный элемент массива.
-     * @param dest   Целевой элемент массива.
+     * @param source Индекс элемента, который будет записан в ячейку с индексом dest.
+     * @param dest   Индекс элемента, который будет записан в ячейку с индексом source.
      * @return Изменённый массив элементов типа int.
      */
     public static int[] swap(int[] array, int source, int dest) {
