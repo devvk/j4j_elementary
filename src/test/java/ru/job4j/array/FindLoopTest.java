@@ -1,9 +1,7 @@
 package ru.job4j.array;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class FindLoopTest {
 
@@ -12,8 +10,8 @@ public class FindLoopTest {
         int[] input = new int[]{5, 4, 3, 2};
         int value = 5;
         int result = FindLoop.indexOf(input, value);
-        int expect = 0;
-        assertThat(result, is(expect));
+        int expected = 0;
+        Assert.assertEquals(expected, result);
     }
 
     @Test
@@ -23,7 +21,16 @@ public class FindLoopTest {
         int start = 2;
         int finish = 4;
         int result = FindLoop.indexOf(input, value, start, finish);
-        int expect = 3;
-        assertThat(result, is(expect));
+        int expected = 3;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenArrayHasNot10ThenMinus1() {
+        int[] input = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int value = 10;
+        int result = FindLoop.indexOf(input, value);
+        int expected = -1;
+        Assert.assertEquals(expected, result);
     }
 }
