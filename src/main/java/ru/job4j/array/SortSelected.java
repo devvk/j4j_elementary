@@ -12,8 +12,8 @@ public class SortSelected {
         int min;
         int indexOfMin;
         for (int i = 0; i < data.length; i++) {
-            min = MinDiapason.findMin(data, i, data.length);
-            indexOfMin = FindLoop.indexOf(data, min, i, data.length);
+            min = MinDiapason.findMin(data, i, data.length - 1);
+            indexOfMin = FindLoop.indexOf(data, min, i, data.length - 1);
             SwitchArray.swap(data, i, indexOfMin);
         }
         return data;
