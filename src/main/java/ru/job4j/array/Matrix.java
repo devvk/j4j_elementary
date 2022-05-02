@@ -1,9 +1,11 @@
 package ru.job4j.array;
 
 public class Matrix {
-    /*
-    В ячейки массива нужно записать элементы таблицы умножения.
-    size - указывает на размер таблицы.
+    /**
+     * Двухмерный массив. Таблица умножения.
+     *
+     * @param size размер таблицы
+     * @return заполненный массив
      */
     public static int[][] multiple(int size) {
         int[][] table = new int[size][size];
