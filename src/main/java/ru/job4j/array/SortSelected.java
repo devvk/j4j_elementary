@@ -9,13 +9,12 @@ public class SortSelected {
      * @return Отсортированный массив.
      */
     public static int[] sort(int[] data) {
+        int min;
+        int indexOfMin;
         for (int i = 0; i < data.length; i++) {
-            // найти минимальный элемент в массиве
-            int min = MinDiapason.findMin(data, i, data.length - 1);
-            // получить index элемента в массиве
-            int index = FindLoop.indexOf(data, min, i, data.length - 1);
-            // перестановка текущего и минимального элементов в массиве
-            SwitchArray.swap(data, i, index);
+            min = MinDiapason.findMin(data, i, data.length - 1);
+            indexOfMin = FindLoop.indexOf(data, min, i, data.length - 1);
+            SwitchArray.swap(data, i, indexOfMin);
         }
         return data;
     }
