@@ -1,8 +1,11 @@
 package ru.job4j.array;
 
 public class SkipNegative {
-    /*
-    Метод skip должен заменить отрицательные значения в массиве на ноль.
+    /**
+     * Метод skip меняет отрицательные значения в массиве на ноль.
+     *
+     * @param array массив
+     * @return array
      */
     public static int[][] skip(int[][] array) {
         for (int i = 0; i < array.length; i++) {
