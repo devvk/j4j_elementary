@@ -4,8 +4,8 @@ public class CheckSquareArray {
     public static boolean checkArray(int[][] array) {
         boolean rsl = true;
         int standard = array.length;
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i].length != standard) {
+        for (int[] i : array) {
+            if (i.length != standard) {
                 rsl = false;
                 break;
             }
