@@ -16,17 +16,12 @@ public class Machine {
         int size = 0;
         money -= price;
         for (int coin : coins) {
-            while (money > 0) {
-                if (money - coin >= 0) {
-                    money -= coin;
-                    rsl[size] = coin;
-                    size++;
-                } else {
-                    break;
-                }
+            while (money > 0 && money - coin >= 0) {
+                money -= coin;
+                rsl[size] = coin;
+                size++;
             }
         }
-
         return Arrays.copyOf(rsl, size);
     }
 }
