@@ -29,5 +29,4 @@ public class TriangleMatrixTest {
         };
         assertArrayEquals(result, TriangleMatrix.rows(3));
     }
-
 }
