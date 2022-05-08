@@ -6,7 +6,7 @@ public class TriangleMatrix {
         int counter = 1;
         for (int i = 0; i < count; i++) {
             triangle[i] = new int[i + 1];
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j < triangle[i].length; j++) {
                 triangle[i][j] = counter;
                 counter++;
             }
