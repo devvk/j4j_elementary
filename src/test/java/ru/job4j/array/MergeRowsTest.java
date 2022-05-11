@@ -2,7 +2,7 @@ package ru.job4j.array;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class MergeRowsTest {
 
@@ -17,5 +17,4 @@ public class MergeRowsTest {
         int[] out = MergeRows.merge(input);
         assertArrayEquals(expected, out);
     }
-
 }
