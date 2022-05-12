@@ -3,7 +3,7 @@ package ru.job4j.array;
 public class ArrayInSquareArray {
     public static int[][] convertArray(int[] array) {
         int size = 0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i <= array.length; i++) {
             if (i * i >= array.length) {
                 size = i;
                 break;
