@@ -4,16 +4,13 @@ import java.util.Arrays;
 
 public class ArrayWithoutEvenElements {
     public static int[] changeData(int[] data) {
-        int[] newData = new int[data.length];
-        int index = 0;
+        int[] array = new int[data.length];
+        int count = 0;
         for (int i : data) {
-            if (i % 2 == 0) {
-                continue;
-            } else {
-                newData[index] = i;
-                index++;
+            if (i % 2 != 0) {
+                array[count++] = i;
             }
         }
-        return Arrays.copyOf(newData, index);
+        return Arrays.copyOf(array, count);
     }
 }
