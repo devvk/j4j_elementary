@@ -10,7 +10,7 @@ public class Cinema {
             for (int j = 0; j < places[i].length; j++) {
                 if (places[i][j] == null) {
                     if (j + 1 < places[i].length && places[i][j + 1] == null) {
-                        return new Place(i, j);
+                         return new Place(i, j);
                     } else {
                         if (i + 1 < places[i].length && places[i + 1][j] == null) {
                             return new Place(i + 1, j);
