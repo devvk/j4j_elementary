@@ -27,7 +27,7 @@ public class FindLoopTest {
 
     @Test
     public void whenArrayHasNot10ThenMinus1() {
-        int[] input = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] input = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
         int value = 10;
         int result = FindLoop.indexOf(input, value);
         int expected = -1;
