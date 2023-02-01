@@ -11,7 +11,7 @@ public class SwitchWeek {
             case 5 -> "Пятница";
             case 6 -> "Суббота";
             case 7 -> "Воскресенье";
-            default -> "Ошибка";
+            default -> throw new IllegalStateException("Invalid day: " + day);
         };
     }
 
