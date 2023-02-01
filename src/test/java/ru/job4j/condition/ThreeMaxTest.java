@@ -1,50 +1,76 @@
 package ru.job4j.condition;
 
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ThreeMaxTest {
     @Test
     public void firstMax() {
-        int rsl = ThreeMax.max(10, 5, 1);
-        assertThat(rsl, is(10));
+        int first = 10;
+        int second = 5;
+        int third = 1;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 10;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void secondMax() {
-        int rsl = ThreeMax.max(10, 50, 1);
-        assertThat(rsl, is(50));
+        int first = 10;
+        int second = 50;
+        int third = 1;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 50;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void thirdMax() {
-        int rsl = ThreeMax.max(1, 5, 100);
-        assertThat(rsl, is(100));
+        int first = 1;
+        int second = 5;
+        int third = 100;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 100;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void allEq() {
-        int rsl = ThreeMax.max(1, 1, 1);
-        assertThat(rsl, is(1));
+        int first = 1;
+        int second = 1;
+        int third = 1;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 1;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void firstEqSecond() {
-        int rsl = ThreeMax.max(10, 10, 1);
-        assertThat(rsl, is(10));
+        int first = 10;
+        int second = 10;
+        int third = 1;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 10;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void firstEqThird() {
-        int rsl = ThreeMax.max(100, 1, 100);
-        assertThat(rsl, is(100));
+        int first = 100;
+        int second = 1;
+        int third = 100;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 100;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void secondEqThird() {
-        int rsl = ThreeMax.max(1, 100, 100);
-        assertThat(rsl, is(100));
+        int first = 1;
+        int second = 100;
+        int third = 100;
+        int result = ThreeMax.max(first, second, third);
+        int expected = 100;
+        assertThat(result).isEqualTo(expected);
     }
 }
