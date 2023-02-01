@@ -14,9 +14,4 @@ public class SwitchWeek {
             default -> throw new IllegalStateException("Invalid day: " + day);
         };
     }
-
-    public static void main(String[] args) {
-        System.out.println(nameOfDay(1));
-        System.out.println(nameOfDay(10));
-    }
 }
