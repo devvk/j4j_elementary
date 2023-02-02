@@ -1,30 +1,29 @@
 package ru.job4j.loop;
 
-import org.junit.Test;
-
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CounterTest {
-
     @Test
     public void whenSumEvenNumbersFromOneToTenThenThirty() {
-        int rsl = Counter.sumByEven(1, 10);
+        int start = 1;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
         int expected = 30;
-        assertThat(rsl, is(expected));
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void whenSumEvenNumbersFromThreeToEightThenEighteen() {
-        int rsl = Counter.sumByEven(3, 8);
+        int result = Counter.sumByEven(3, 8);
         int expected = 18;
-        assertThat(rsl, is(expected));
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     public void whenSumEvenNumbersFromOneToOneThenZero() {
-        int rsl = Counter.sumByEven(1, 1);
+        int result = Counter.sumByEven(1, 1);
         int expected = 0;
-        assertThat(rsl, is(expected));
+        assertThat(result).isEqualTo(expected);
     }
 }
