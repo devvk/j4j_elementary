@@ -2,10 +2,16 @@ package ru.job4j.array;
 
 public class Check {
 
-    public static boolean mono(boolean[] data) {
+    /**
+     * Метод проверяет, что все элементы в массиве являются либо true либо false.
+     *
+     * @param array массив данных
+     * @return результат проверки
+     */
+    public static boolean mono(boolean[] array) {
         boolean result = true;
-        for (boolean d : data) {
-            if (d != data[0]) {
+        for (boolean value : array) {
+            if (value != array[0]) {
                 result = false;
                 break;
             }
