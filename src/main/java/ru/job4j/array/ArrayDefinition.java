@@ -17,8 +17,8 @@ public class ArrayDefinition {
         names[2] = "Kurt Cobain";
         names[3] = "Wolfgang Amadeus Mozart";
 
-        for (String s: names) {
-            System.out.println(s);
+        for (String name : names) {
+            System.out.println(name);
         }
     }
 }
