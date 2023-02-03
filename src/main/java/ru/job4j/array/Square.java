@@ -8,11 +8,11 @@ public class Square {
      * @return Массив с элементами от 0 до bound, возведенными в квадрат.
      */
     public static int[] calculate(int bound) {
-        int[] rst = new int[bound];
+        int[] array = new int[bound];
         for (int i = 0; i < bound; i++) {
-            rst[i] = i * i;
+            array[i] = i * i;
         }
-        return rst;
+        return array;
     }
 
     public static void main(String[] args) {
