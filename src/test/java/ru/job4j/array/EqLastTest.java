@@ -1,11 +1,10 @@
 package ru.job4j.array;
 
-import static ru.job4j.array.EqLast.check;
-
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static ru.job4j.array.EqLast.check;
 
 public class EqLastTest {
 
