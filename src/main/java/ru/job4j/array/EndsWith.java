@@ -4,9 +4,9 @@ public class EndsWith {
     /**
      * Метод проверяет то, что слово заканчивается на определенную последовательность.
      *
-     * @param word проверяемый массив
-     * @param post последовательность
-     * @return результат проверки true или false
+     * @param word Проверяемый массив
+     * @param post Последовательность для проверки
+     * @return Результат проверки true или false
      */
     public static boolean endsWith(char[] word, char[] post) {
         boolean result = true;
