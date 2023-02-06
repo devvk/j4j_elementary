@@ -1,9 +1,8 @@
 package ru.job4j.array;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixSumTest {
 
@@ -12,9 +11,9 @@ public class MatrixSumTest {
         int[][] in = {
                 {10}
         };
-        int expect = 10;
-        int rsl = MatrixSum.sum(in);
-        assertThat(rsl, is(expect));
+        int expected = 10;
+        int result = MatrixSum.sum(in);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -23,9 +22,9 @@ public class MatrixSumTest {
                 {1, 2},
                 {1, 2}
         };
-        int expect = 6;
-        int rsl = MatrixSum.sum(in);
-        assertThat(rsl, is(expect));
+        int expected = 6;
+        int result = MatrixSum.sum(in);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -34,8 +33,8 @@ public class MatrixSumTest {
                 {1, 2, 1},
                 {1, 2, 0}
         };
-        int expect = 7;
-        int rsl = MatrixSum.sum(in);
-        assertThat(rsl, is(expect));
+        int expected = 7;
+        int result = MatrixSum.sum(in);
+        assertThat(result).isEqualTo(expected);
     }
 }
