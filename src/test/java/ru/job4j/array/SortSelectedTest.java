@@ -1,24 +1,23 @@
 package ru.job4j.array;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SortSelectedTest {
     @Test
     public void whenSort3() {
         int[] input = new int[]{3, 4, 1};
         int[] result = SortSelected.sort(input);
-        int[] expect = new int[]{1, 3, 4};
-        assertThat(result, is(expect));
+        int[] expected = new int[]{1, 3, 4};
+        assertThat(result).containsExactly(expected);
     }
 
     @Test
     public void whenSort5() {
         int[] input = new int[]{3, 4, 1, 2, 5};
         int[] result = SortSelected.sort(input);
-        int[] expect = new int[]{1, 2, 3, 4, 5};
-        assertThat(result, is(expect));
+        int[] expected = new int[]{1, 2, 3, 4, 5};
+        assertThat(result).containsExactly(expected);
     }
 }
