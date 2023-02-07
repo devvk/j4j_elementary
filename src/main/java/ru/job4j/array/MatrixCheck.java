@@ -5,7 +5,7 @@ public class MatrixCheck {
      * Метод проверяет что все элементы в строке заполнены символом 'X'.
      *
      * @param board Массив для проверки
-     * @param row Строка для проверки
+     * @param row   Строка для проверки
      * @return Результат проверки true или false
      */
     public static boolean monoHorizontal(char[][] board, int row) {
@@ -21,6 +21,10 @@ public class MatrixCheck {
 
     /**
      * Метод проверяет что все элементы в колонке заполнены символом 'X'.
+     *
+     * @param board  Массив для проверки
+     * @param column Строка для проверки
+     * @return Результат проверки true или false
      */
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
