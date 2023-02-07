@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Machine {
     /**
-     * Жадный алгоритм. Сдача в кофе машине
+     * Жадный алгоритм. Сдача в кофе машине.
      *
      * @param money купюра
      * @param price цена
