@@ -39,6 +39,9 @@ public class MatrixCheck {
 
     /**
      * Метод заполняет одномерный массив элементами диагонали из двухмерного массива.
+     *
+     * @param board Двумерный массив с элементами диагонали
+     * @return Заполненный одномерный массив
      */
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
