@@ -1,5 +1,7 @@
 package ru.job4j.array;
 
+import java.util.Arrays;
+
 public class Defragment {
     /**
      * Дефрагментация массива.
@@ -21,5 +23,14 @@ public class Defragment {
             }
         }
         return array;
+    }
+
+    public static void main(String[] args) {
+        String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
+        System.out.println(Arrays.toString(input));
+        String[] compressed = compress(input);
+        for (String s : compressed) {
+            System.out.print(s + " ");
+        }
     }
 }
