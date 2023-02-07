@@ -2,7 +2,11 @@ package ru.job4j.array;
 
 public class MatrixCheck {
     /**
-     * Проверяет что все элементы в строке заполнены символом 'X'
+     * Метод проверяет что все элементы в строке заполнены символом 'X'.
+     *
+     * @param board Массив для проверки
+     * @param row Строка для проверки
+     * @return Результат проверки true или false
      */
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
@@ -16,7 +20,7 @@ public class MatrixCheck {
     }
 
     /**
-     * Проверяет что все элементы в колонке заполнены символом 'X'
+     * Метод проверяет что все элементы в колонке заполнены символом 'X'.
      */
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
@@ -30,7 +34,7 @@ public class MatrixCheck {
     }
 
     /**
-     * Заполняет одномерный массив элементами диагонали из двухмерного массива
+     * Метод заполняет одномерный массив элементами диагонали из двухмерного массива.
      */
     public static char[] extractDiagonal(char[][] board) {
         char[] rsl = new char[board.length];
@@ -41,7 +45,7 @@ public class MatrixCheck {
     }
 
     /**
-     * Проверять, находится ли на поле выигрышная ситуация
+     * Метод проверяет, находится ли на поле выигрышная ситуация
      * Массив всегда квадратный и всегда на 5 элементов.
      */
     public static boolean isWin(char[][] board) {
