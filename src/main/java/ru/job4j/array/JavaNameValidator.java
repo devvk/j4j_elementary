@@ -13,8 +13,8 @@ public class JavaNameValidator {
      * @return true если имя переменной валидное, иначе false.
      */
     public static boolean isNameValid(String name) {
-        boolean isValid = true;
-        if (!name.isEmpty() && isLowerLatinLetter(name.codePointAt(0))) {
+        boolean isValid = !name.isEmpty() && isLowerLatinLetter(name.codePointAt(0));
+        if (isValid) {
             for (int i = 1; i < name.length(); i++) {
                 int code = name.codePointAt(i);
                 if (!isUpperLatinLetter(code)
@@ -25,8 +25,6 @@ public class JavaNameValidator {
                     break;
                 }
             }
-        } else {
-            isValid = false;
         }
         return isValid;
     }
